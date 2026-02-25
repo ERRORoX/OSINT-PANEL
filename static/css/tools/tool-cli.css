@@ -1,0 +1,101 @@
+/* Общие стили для CLI-инструментов: h8mail, GHunt, Holehe, theHarvester */
+.tool-cli-page {
+  max-width: 900px;
+}
+
+.tool-cli-header {
+  margin-bottom: var(--space-lg);
+}
+
+.tool-cli-header h2 {
+  margin: 0 0 var(--space-sm);
+}
+
+.tool-cli-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.tool-cli-desc code {
+  background: var(--bg-input);
+  padding: 0.1em 0.4em;
+  border-radius: var(--radius);
+  font-size: 0.9em;
+}
+
+.tool-cli-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: flex-end;
+  margin-bottom: var(--space-md);
+}
+
+.tool-cli-form .form-group {
+  margin-bottom: 0;
+}
+
+.tool-cli-form .form-group-check {
+  display: flex;
+  align-items: center;
+}
+
+.tool-cli-form .form-group-check label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tool-cli-form .form-group-check input[type="checkbox"] {
+  width: 1.1em;
+  height: 1.1em;
+  accent-color: var(--accent);
+}
+
+.tool-cli-form input[type="email"],
+.tool-cli-form input[type="text"],
+.tool-cli-form input[type="number"],
+.tool-cli-form select {
+  min-width: 160px;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.tool-cli-status {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+  min-height: 1.4em;
+}
+
+.tool-cli-output {
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  padding: var(--space-md);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-height: 70vh;
+  overflow: auto;
+  margin: 0;
+}
+
+.tool-cli-output.success {
+  border-color: var(--success);
+}
+
+.tool-cli-output.error {
+  border-color: var(--error);
+  color: var(--error);
+}

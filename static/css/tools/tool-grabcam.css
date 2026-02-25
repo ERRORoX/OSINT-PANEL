@@ -1,0 +1,386 @@
+/* Панель Grabcam — удобный пошаговый дизайн */
+#panel-grabcam {
+  max-width: none;
+}
+
+#panel-grabcam .grabcam-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+#panel-grabcam .grabcam-header {
+  margin-bottom: var(--space-xs);
+}
+
+#panel-grabcam .grabcam-header h2 {
+  margin: 0 0 var(--space-sm);
+}
+
+#panel-grabcam .grabcam-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Карточка: функции вкл/выкл */
+#panel-grabcam .grabcam-features-card {
+  border-color: var(--accent);
+  background: var(--bg-panel);
+}
+
+#panel-grabcam .grabcam-features-desc {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+#panel-grabcam .grabcam-features-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+#panel-grabcam .grabcam-feature-check {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.9rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+#panel-grabcam .grabcam-feature-check input[type="checkbox"] {
+  width: 1.1em;
+  height: 1.1em;
+  accent-color: var(--accent);
+}
+
+/* Карточка управления сервером */
+#panel-grabcam .grabcam-control-card {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-card);
+}
+
+#panel-grabcam .grabcam-card-title {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+#panel-grabcam .grabcam-control-form {
+  margin-bottom: var(--space-sm);
+}
+
+#panel-grabcam .grabcam-control-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+#panel-grabcam .grabcam-control-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-right: var(--space-xs);
+}
+
+#panel-grabcam .grabcam-select {
+  flex: 1;
+  min-width: 180px;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+#panel-grabcam .grabcam-method-hint {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+#panel-grabcam .grabcam-status {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  min-height: 1.4em;
+  margin-bottom: var(--space-xs);
+}
+
+#panel-grabcam .grabcam-link-box {
+  padding: var(--space-sm) 0;
+}
+
+#panel-grabcam .grabcam-link-box.result-box--placeholder {
+  color: var(--text-muted);
+}
+
+#panel-grabcam .grabcam-link-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+#panel-grabcam .grabcam-link-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+#panel-grabcam .grabcam-link-url {
+  word-break: break-all;
+  flex: 1;
+  min-width: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+#panel-grabcam .grabcam-hint {
+  margin-top: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+#panel-grabcam .grabcam-formgrab-card .grabcam-formgrab-desc {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+#panel-grabcam .grabcam-inline-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex: 1;
+  min-width: 0;
+}
+
+#panel-grabcam .grabcam-inline-link .grabcam-link-url {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Сетка из трёх карточек */
+#panel-grabcam .grabcam-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+@media (max-width: 900px) {
+  #panel-grabcam .grabcam-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#panel-grabcam .grabcam-card {
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  min-height: 280px;
+  max-height: 70vh;
+  box-shadow: var(--shadow-card);
+}
+
+#panel-grabcam .grabcam-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  flex-shrink: 0;
+}
+
+#panel-grabcam .grabcam-card-head .grabcam-card-title {
+  margin: 0;
+}
+
+/* Фото */
+#panel-grabcam .grabcam-photos-stats {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+#panel-grabcam .grabcam-photos-stats--empty {
+  display: none;
+}
+
+#panel-grabcam .grabcam-photos-list {
+  flex: 1;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+  align-content: start;
+}
+
+#panel-grabcam .grabcam-photos-list--empty {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+#panel-grabcam .grabcam-photo-item a {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-panel);
+}
+
+#panel-grabcam .grabcam-photo-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+#panel-grabcam .grabcam-photo-item a:hover {
+  border-color: var(--accent);
+}
+
+#panel-grabcam .grabcam-photo-meta {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#panel-grabcam .grabcam-photos-empty {
+  padding: var(--space-md);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Геолокация */
+#panel-grabcam .grabcam-locations-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+#panel-grabcam .grabcam-locations-list--empty {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: var(--space-md);
+}
+
+#panel-grabcam .grabcam-location-item {
+  padding: var(--space-sm);
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+}
+
+#panel-grabcam .grabcam-location-row {
+  margin-bottom: 2px;
+}
+
+#panel-grabcam .grabcam-location-row:last-child {
+  margin-bottom: 0;
+}
+
+#panel-grabcam .grabcam-location-meta {
+  color: var(--text-muted);
+}
+
+#panel-grabcam .grabcam-location-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+#panel-grabcam .grabcam-location-map {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+
+#panel-grabcam .grabcam-locations-empty {
+  padding: var(--space-md);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Введённые данные форм */
+#panel-grabcam .grabcam-formgrab-captures-list {
+  flex: 1;
+  overflow-y: auto;
+  font-size: 0.8rem;
+}
+
+#panel-grabcam .grabcam-formgrab-captures-list--empty {
+  color: var(--text-muted);
+  padding: var(--space-md);
+}
+
+#panel-grabcam .grabcam-formgrab-empty {
+  display: block;
+  padding: var(--space-sm) 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+#panel-grabcam .grabcam-formgrab-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+#panel-grabcam .grabcam-formgrab-table th,
+#panel-grabcam .grabcam-formgrab-table td {
+  padding: var(--space-xs) var(--space-sm);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+#panel-grabcam .grabcam-formgrab-table th {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+#panel-grabcam .grabcam-formgrab-value {
+  word-break: break-all;
+  max-width: 100px;
+}
+
+#panel-grabcam .grabcam-formgrab-ip {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+#panel-grabcam .btn-danger {
+  background: var(--error);
+  color: #fff;
+  border: none;
+}
+
+#panel-grabcam .btn-danger:hover {
+  filter: brightness(1.1);
+}

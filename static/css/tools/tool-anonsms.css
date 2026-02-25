@@ -1,0 +1,40 @@
+/* Стили только для панели ANONSMS. Остальные инструменты не затрагиваются. */
+#panel-anonsms .phone-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: var(--space-md);
+}
+
+#panel-anonsms .form-row {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-end;
+}
+
+#panel-anonsms .form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+#panel-anonsms .label-message.label-message--ok {
+  color: var(--success);
+}
+
+#panel-anonsms .label-message.label-message--blocked {
+  color: var(--error);
+}
+
+#panel-anonsms .countdown-box {
+  margin-top: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+#panel-anonsms .countdown-box.countdown-ready {
+  border-color: var(--success);
+  color: var(--success);
+}

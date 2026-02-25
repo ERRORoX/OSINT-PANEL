@@ -1,0 +1,104 @@
+/* Вкладка «API ключи» */
+#panel-settings h2 {
+  margin: 0 0 var(--space-md);
+  font-size: 1.25rem;
+}
+
+#panel-settings .description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-lg);
+}
+
+.settings-key-row {
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.settings-key-row:last-of-type {
+  border-bottom: none;
+}
+
+.settings-key-row label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.settings-key-row .key-input-wrap {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.settings-key-row .key-input-wrap input {
+  flex: 1;
+  min-width: 200px;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.settings-key-row .key-input-wrap input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.settings-key-row .btn-help {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.85rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.settings-key-row .btn-help:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.settings-key-row .help-block {
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-input);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: none;
+  white-space: pre-wrap;
+}
+
+.settings-key-row .help-block.visible {
+  display: block;
+}
+
+.settings-key-row .help-block a {
+  color: var(--accent);
+}
+
+#panel-settings .btn-save {
+  margin-top: var(--space-md);
+}
+
+#panel-settings .settings-message {
+  margin-top: var(--space-md);
+  font-size: 0.9rem;
+}
+
+#panel-settings .settings-message.success {
+  color: var(--success);
+}
+
+#panel-settings .settings-message.error {
+  color: var(--error);
+}

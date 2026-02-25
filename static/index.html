@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OSINT Panel — единая панель для разведки в открытых источниках: домены, email, имена пользователей, утечки.">
+  <meta name="theme-color" content="#060608">
+  <title>OSINT Panel</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect fill='%23060608' width='32' height='32' rx='4'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='%2300ff88' font-family='monospace'>O</text></svg>">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/layout.css">
+  <link rel="stylesheet" href="/css/tools.css">
+  <link rel="stylesheet" href="/css/tools/tool-anonsms.css">
+  <link rel="stylesheet" href="/css/tools/tool-instagram-bruter.css">
+  <link rel="stylesheet" href="/css/tools/tool-grabcam.css">
+  <link rel="stylesheet" href="/css/tools/tool-cli.css">
+  <link rel="stylesheet" href="/css/tools/tool-google-osint.css">
+  <link rel="stylesheet" href="/css/tools/tool-theharvester.css">
+  <link rel="stylesheet" href="/css/tools/tool-domain-tools.css">
+  <link rel="stylesheet" href="/css/tools/tool-username-tools.css">
+  <link rel="stylesheet" href="/css/settings.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-header-left">
+      <span class="app-header-icon" aria-hidden="true"></span>
+      <h1 class="app-header-title">OSINT Panel</h1>
+    </div>
+    <div class="app-header-right">
+      <span class="app-header-system" id="header-system">ОС: —</span>
+      <div class="app-header-user" id="header-user">
+        <button type="button" class="app-header-user-btn" aria-expanded="false" aria-haspopup="true" id="btn-user-menu">
+          <span class="app-header-user-icon" aria-hidden="true"></span>
+          <span class="app-header-user-name">Admin</span>
+          <span class="app-header-user-chevron" aria-hidden="true"></span>
+        </button>
+        <div class="app-header-user-menu" id="user-menu" hidden>
+          <a href="#settings" class="app-header-user-menu-item" data-tool-id="settings">API ключи</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="app-body">
+    <aside class="sidebar">
+      <nav id="nav-tools"></nav>
+    </aside>
+    <main class="main" id="main-content">
+      <div id="panel-placeholder" class="no-tool active">Выберите раздел или инструмент в меню слева.</div>
+      <div id="panel-dashboard" class="tool-panel" data-tool-id="dashboard"></div>
+      <div id="panel-anonsms" class="tool-panel tool-view-panel" data-tool-id="anonsms"></div>
+      <div id="panel-instagram-bruter" class="tool-panel tool-view-panel" data-tool-id="instagram-bruter"></div>
+      <div id="panel-grabcam" class="tool-panel tool-view-panel" data-tool-id="grabcam"></div>
+      <div id="panel-google-osint" class="tool-panel tool-view-panel" data-tool-id="google-osint"></div>
+      <div id="panel-domain-tools" class="tool-panel tool-view-panel" data-tool-id="domain-tools"></div>
+      <div id="panel-username-tools" class="tool-panel tool-view-panel" data-tool-id="username-tools"></div>
+      <div id="panel-reports" class="tool-panel" data-tool-id="reports"></div>
+      <div id="panel-settings" class="tool-panel" data-tool-id="settings"></div>
+    </main>
+  </div>
+  <footer class="app-footer">
+    <span>OSINT Panel</span>
+    <span class="footer-hint">Разведка в открытых источниках — домены, email, соцсети</span>
+  </footer>
+  <script src="/js/app.js" type="module"></script>
+</body>
+</html>

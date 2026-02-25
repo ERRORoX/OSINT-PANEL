@@ -1,0 +1,70 @@
+/* Google OSINT — Holehe + h8mail */
+.tool-google-osint-page {
+  max-width: 960px;
+}
+
+.tool-google-osint-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: flex-end;
+  margin-bottom: var(--space-md);
+}
+
+.tool-google-osint-form .form-group {
+  margin-bottom: 0;
+}
+
+.tool-google-osint-form input[type="text"] {
+  min-width: 200px;
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.tool-google-osint-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: center;
+  width: 100%;
+}
+
+.tool-google-osint-checkboxes label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.tool-google-osint-checkboxes input[type="checkbox"] {
+  width: 1.1em;
+  height: 1.1em;
+  accent-color: var(--accent);
+}
+
+.tool-google-osint-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+}
+
+.tool-google-osint-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-panel);
+}
+
+.tool-google-osint-block.success {
+  border-color: var(--success);
+}
+
+.tool-google-osint-block.error {
+  border-color: var(--error);
+}

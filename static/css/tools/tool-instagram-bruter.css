@@ -1,0 +1,242 @@
+/* Стили только для панели Instagram Bruter */
+#panel-instagram-bruter {
+  max-width: none;
+}
+
+#panel-instagram-bruter .instagram-bruter-layout {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: stretch;
+  min-height: 360px;
+}
+
+#panel-instagram-bruter .instagram-bruter-left {
+  flex: 0 0 320px;
+  min-width: 0;
+}
+
+#panel-instagram-bruter .instagram-bruter-right {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+#panel-instagram-bruter select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+#panel-instagram-bruter textarea {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+#panel-instagram-bruter .btn-secondary {
+  background: var(--bg-input);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+#panel-instagram-bruter .btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+#panel-instagram-bruter .btn-danger {
+  background: var(--error);
+  color: #fff;
+  border: none;
+}
+
+/* Кнопка «Остановить» должна оставаться кликабельной при loading (форма с pointer-events: none) */
+#panel-instagram-bruter form.loading .btn-danger {
+  pointer-events: auto;
+  opacity: 1;
+  cursor: pointer;
+}
+
+#panel-instagram-bruter .btn-danger:hover {
+  filter: brightness(1.1);
+}
+
+#panel-instagram-bruter .form-actions {
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+#panel-instagram-bruter .btn-link {
+  display: inline-block;
+  margin-top: var(--space-xs);
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#panel-instagram-bruter .btn-link:hover {
+  color: var(--accent);
+}
+
+#panel-instagram-bruter .tried-count-hint {
+  display: block;
+  margin-top: var(--space-xs);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+#panel-instagram-bruter .result-box--placeholder {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+#panel-instagram-bruter .refresh-status {
+  margin-left: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+#panel-instagram-bruter .refresh-status.success {
+  color: var(--success);
+}
+
+#panel-instagram-bruter .refresh-status.error {
+  color: var(--error);
+}
+
+#panel-instagram-bruter .run-status {
+  margin-bottom: var(--space-md);
+  font-size: 0.9rem;
+  min-height: 1.5em;
+}
+
+#panel-instagram-bruter .run-status--busy {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+#panel-instagram-bruter .result-box {
+  flex: 1;
+  min-height: 200px;
+  max-height: none;
+  overflow-y: auto;
+}
+
+#panel-instagram-bruter .result-box--compact {
+  /* наследует max-height от .result-box */
+}
+
+#panel-instagram-bruter .result-box--stream .stream-title {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+#panel-instagram-bruter .result-box .password-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  list-style: disc;
+}
+
+#panel-instagram-bruter .result-box .password-list li {
+  margin-bottom: 0.15rem;
+}
+
+#panel-instagram-bruter .result-box--found .found-password {
+  display: block;
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  background: rgba(34, 197, 94, 0.15);
+  border: 1px solid var(--success);
+  border-radius: var(--radius);
+  color: var(--success);
+  font-size: 1.1rem;
+}
+
+#panel-instagram-bruter .result-box--found .found-password strong {
+  color: inherit;
+}
+
+#panel-instagram-bruter .result-box--found .found-log {
+  margin: 0;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+#panel-instagram-bruter .result-box--found .found-password {
+  margin-bottom: var(--space-md);
+  padding: var(--space-md);
+  background: rgba(0, 128, 0, 0.15);
+  border: 1px solid var(--success);
+  border-radius: var(--radius);
+  color: var(--success);
+  font-size: 1.1rem;
+}
+
+#panel-instagram-bruter .result-box--found .found-log {
+  margin: 0;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  max-height: 12rem;
+  overflow: auto;
+}
+
+#panel-instagram-bruter .found-accounts-section {
+  flex-shrink: 0;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border);
+}
+
+#panel-instagram-bruter .found-accounts-title {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+#panel-instagram-bruter .found-accounts-list {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  max-height: 200px;
+  overflow-y: auto;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-sm) var(--space-md);
+}
+
+#panel-instagram-bruter .found-accounts-list--empty {
+  color: var(--text-muted);
+}
+
+#panel-instagram-bruter .found-accounts-ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+#panel-instagram-bruter .found-accounts-ul li {
+  margin-bottom: 0.25rem;
+}
+
+#panel-instagram-bruter .found-u {
+  color: var(--accent);
+}
+
+#panel-instagram-bruter .found-p {
+  color: var(--text);
+}

@@ -1,0 +1,290 @@
+/* Общие стили инструментов: формы, кнопки, карточки */
+.tool-panel > h2:first-child,
+.tool-panel .tool-cli-header h2 {
+  margin: 0 0 var(--space-sm);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  letter-spacing: 0.03em;
+}
+
+.tool-panel .description,
+.tool-panel .tool-cli-desc {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-bottom: var(--space-lg);
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.form-group input.error,
+.form-group textarea.error {
+  border-color: var(--error);
+  box-shadow: 0 0 0 1px rgba(255, 68, 102, 0.2);
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group select {
+  cursor: pointer;
+}
+
+.tool-form-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-md);
+}
+
+.form-error {
+  font-size: 0.85rem;
+  color: var(--error);
+  margin-top: var(--space-xs);
+}
+
+.btn {
+  padding: var(--space-sm) var(--space-lg);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition), box-shadow var(--transition), transform 0.1s;
+  font-family: var(--font-sans);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #060608;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+  box-shadow: var(--accent-glow);
+}
+
+.btn-secondary {
+  background: var(--bg-panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: var(--glow);
+}
+
+.btn-danger {
+  background: var(--error);
+  color: #fff;
+}
+
+.btn-danger:hover:not(:disabled) {
+  filter: brightness(1.15);
+  box-shadow: 0 0 16px rgba(255, 68, 102, 0.3);
+}
+
+.btn:disabled,
+.btn.is-loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn.is-loading {
+  position: relative;
+}
+
+.result-box {
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  box-shadow: var(--shadow-card);
+}
+
+.result-box.success {
+  border-color: var(--success);
+  box-shadow: var(--shadow-card), 0 0 20px rgba(0, 255, 136, 0.08);
+}
+
+.result-box.error {
+  border-color: var(--error);
+  color: var(--error);
+  box-shadow: var(--shadow-card), 0 0 20px rgba(255, 68, 102, 0.08);
+}
+
+.result-box:empty {
+  display: none;
+}
+
+.result-box--placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.tool-form {
+  padding: var(--space-md) 0;
+}
+
+.run-status {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  min-height: 1.5em;
+}
+
+.run-status--busy {
+  color: var(--accent);
+}
+
+.form-error {
+  margin-top: var(--space-sm);
+}
+
+.form-error:empty {
+  display: none !important;
+}
+
+/* Стили .tool-cli-status и .tool-cli-output — в tools/tool-cli.css */
+
+/* ——— Единые блоки интерфейса инструментов (по референсу) ——— */
+.tool-view-section {
+  margin-bottom: var(--space-xl);
+}
+
+.tool-view-section__title {
+  margin: 0 0 var(--space-md);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+  font-family: var(--font-display);
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.tool-view-section__title::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent);
+}
+
+/* Блок «живого» терминала */
+.tool-terminal {
+  background: #050508;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-x: auto;
+  max-height: 400px;
+  overflow-y: auto;
+  color: var(--accent);
+}
+
+.tool-terminal:empty::before {
+  content: "Ожидание вывода…";
+  color: var(--text-muted);
+}
+
+.tool-terminal.success {
+  border-color: var(--success);
+}
+
+.tool-terminal.error {
+  border-color: var(--error);
+  color: var(--error);
+}
+
+/* Обзор результатов — карточки */
+.tool-results-overview {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.tool-results-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+}
+
+.tool-results-card__title {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-bright);
+  letter-spacing: 0.04em;
+}
+
+.tool-results-card__content {
+  font-size: 0.88rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.tool-results-card__content pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

@@ -1,0 +1,53 @@
+/* theHarvester + общие стили CLI-страниц */
+.tool-cli-page {
+  max-width: 960px;
+}
+
+.tool-cli-form {
+  margin-bottom: var(--space-md);
+}
+
+.tool-theharvester-page .tool-cli-form .form-group:not(.form-group-sources):not(.form-group-inline) {
+  max-width: 400px;
+}
+
+.tool-theharvester-page .tool-cli-form .form-group {
+  max-width: 100%;
+}
+
+.tool-theharvester-page .form-group-inline {
+  max-width: 120px;
+}
+
+.tool-theharvester-page .form-group-inline label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.form-hint {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted, #666);
+  margin-top: 0.25rem;
+}
+
+.form-group-sources .th-sources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.5rem 1rem;
+  margin-top: 0.5rem;
+}
+
+.th-source-check {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: normal;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.th-source-check input {
+  margin: 0;
+  flex-shrink: 0;
+}

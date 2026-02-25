@@ -1,0 +1,69 @@
+/* Объединённый раздел «Поиск по имени пользователя» */
+.username-tools-page {
+  max-width: 960px;
+}
+
+.username-tools-header {
+  margin-bottom: var(--space-xl);
+}
+
+.username-tools-input-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.username-tools-input-row .form-group {
+  margin-bottom: 0;
+  min-width: 200px;
+}
+
+.username-tools-input-row input {
+  min-width: 220px;
+}
+
+/* Блоки инструментов (Sherlock, Maigret) — чтобы контент был виден */
+.username-tools-page .domain-tool-block {
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.username-tools-page .domain-tool-block__title {
+  margin: 0 0 var(--space-xs);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.username-tools-page .domain-tool-block__desc {
+  margin: 0 0 var(--space-md);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.username-tools-page .domain-tool-block__status {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  min-height: 1.5em;
+}
+
+.username-tools-page .domain-tool-block__status.error {
+  color: var(--error);
+}
+
+.username-tools-page .domain-tool-block__output {
+  margin-top: var(--space-sm);
+  max-height: 400px;
+  overflow: auto;
+  background: #050508;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--text);
+}

@@ -1,0 +1,81 @@
+/* Объединённый раздел «Поиск по домену» */
+.domain-tools-page {
+  max-width: 960px;
+}
+
+.domain-tools-domain-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.domain-tools-domain-row .form-group {
+  margin-bottom: 0;
+  min-width: 200px;
+}
+
+.domain-tools-domain-row input {
+  min-width: 220px;
+}
+
+.domain-tool-block {
+  margin-bottom: var(--space-xl);
+  padding: var(--space-md);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.domain-tool-block__title {
+  margin: 0 0 var(--space-xs);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.domain-tool-block__desc {
+  margin: 0 0 var(--space-md);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.domain-tool-block .btn-block-run {
+  margin-bottom: var(--space-sm);
+}
+
+.domain-tool-block__status {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  min-height: 1.5em;
+}
+
+.domain-tool-block__status.error {
+  color: var(--error);
+}
+
+.domain-tool-block__output {
+  margin-top: var(--space-sm);
+  max-height: 400px;
+  overflow: auto;
+}
+
+.domain-tools-sources {
+  margin-bottom: var(--space-md);
+}
+
+.domain-tools-sources .th-sources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.4rem 1rem;
+}
+
+.domain-tools-sources .th-source-check {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 0.88rem;
+}
